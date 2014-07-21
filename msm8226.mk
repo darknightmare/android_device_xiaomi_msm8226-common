@@ -38,10 +38,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
 
-
-
-TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -89,16 +85,8 @@ PRODUCT_PACKAGES += \
 
 # Ebtables
 PRODUCT_PACKAGES += \
-    ebtables \
     ethertypes \
     libebtc
-
-# FM radio
-PRODUCT_PACKAGES += \
-    qcom.fmradio \
-    libqcomfm_jni \
-    FM2 \
-    FMRecord
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -126,9 +114,6 @@ PRODUCT_PACKAGES += \
     lights.MSM8226 \
     memtrack.msm8226 \
     power.msm8226
-
-# QRNG
-PRODUCT_PACKAGES += qrngp
 
 # Utilities
 PRODUCT_PACKAGES += \
@@ -163,7 +148,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     WCNSS_qcom_wlan_factory_nv.bin \
     WCNSS_qcom_wlan_nv.bin \
-    libxml2 \
+    libxml2
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -296,9 +281,6 @@ PRODUCT_PACKAGES += \
 
 # Charger
 PRODUCT_PACKAGES += charger charger_res_images
-
-# QRNGD
-PRODUCT_PACKAGES += qrngd
 
 # Crda
 PRODUCT_PACKAGES += \

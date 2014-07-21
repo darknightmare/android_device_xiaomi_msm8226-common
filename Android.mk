@@ -20,7 +20,7 @@
 # are responsible for having their own logic, for fine-grained control.
 
 ifeq ($(BOARD_VENDOR),xiaomi-qcom)
-ifneq ($(filter msm8226,$(TARGET_BOARD_PLATFORM)),)
+ifeq ($(TARGET_BOARD_PLATFORM),msm8226)
 
 LOCAL_PATH := $(call my-dir)
 
